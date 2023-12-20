@@ -1,4 +1,5 @@
 اسکریپت رایگان معدن فروت کرفت 
+
 راهنمای اجرای کد :
 
 git clone https://github.com/AmirAli67/automaedan85.git
