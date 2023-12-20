@@ -6,12 +6,12 @@ from json import loads , JSONDecodeError
 from uuid import uuid4
 from time import sleep
 from itertools import cycle
-from colorama import Fore, init
+from colorama import init, Fore
 from hashlib import md5
 import time
 from random import shuffle
 
-init(autoreset=True)  
+init(autoreset=True)  # initialize colorama
 
 Creator = "t.me/NothingReal"
 session = Session()
@@ -67,14 +67,8 @@ def start(sleep_time):
                 sys.stdout.flush()
 
 def print_banner():
-    colors = [Fore.GREEN, Fore.YELLOW, Fore.BLUE, Fore.MAGENTA, Fore.RED]
-    shuffle(colors)  # shuffle the colors list randomly
-    color = colors[0]  # select the first color from the shuffled list
-    print(color + "_  ______      _  _____ ___  ____")
-    print(color + "| |/ /  _ \    / \|_   _/ _ \/ ___|")
-    print(color + "| ' /| |_) |  / _ \ | || | | \___ \\")
-    print(color + "| . \|  _ <  / ___ \| || |_| |___) |")
-    print(color + "|_|\_\_| \_\/_/   \_\_| \___/|____/")
+    system("figlet AmirAli67 | lolcat")
+    print(Fore.YELLOW + "----------------------" + Fore.RESET)
 
 def main():
     print_banner()
@@ -89,9 +83,9 @@ headers = {
     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
 }
 
-
+# install required packages
 subprocess.check_call([sys.executable, "-m", "pip", "install", "colorama"])
-
 subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+subprocess.check_call([sys.executable, "-m", "pip", "install", "lolcat"])
 
 main()
