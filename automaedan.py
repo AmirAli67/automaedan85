@@ -10,6 +10,7 @@ from colorama import init, Fore
 from hashlib import md5
 import time
 from random import shuffle
+from urllib.parse import urlencode
 
 init(autoreset=True)  # initialize colorama
 
@@ -76,6 +77,7 @@ def main():
     print("\n\n\n\n", 'mine time is >> ', Fore.CYAN, str(sleep_time), Fore.RESET, ' min', "\n")
     start(sleep_time)
 
+# 获取collect_data的值
 collect_data = {'udid' : str(uuid4().int) , 'restore_key' : restore_key}
 headers = {
     'User-Agent' : 'Dalvik/2.1.0 (Linux; U; Android 13; 23049PCD8G Build/TKQ1.221114.001)',
@@ -83,7 +85,7 @@ headers = {
     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
 }
 
-# install required packages
+# 安装所需的包
 subprocess.check_call([sys.executable, "-m", "pip", "install", "colorama"])
 subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
 subprocess.check_call([sys.executable, "-m", "pip", "install", "lolcat"])
