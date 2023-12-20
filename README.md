@@ -11,6 +11,8 @@
 
    ```shell
    cd automaedan85
+   ```
+   ```shell
    python automaedan.py
    ```
 
