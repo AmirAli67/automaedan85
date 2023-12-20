@@ -1,16 +1,19 @@
-اسکریپت رایگان معدن فروت کرفت 
 
-راهنمای اجرای کد :
+## راهنمای اجرای کد
 
-git clone https://github.com/AmirAli67/automaedan85.git
+1. ابتدا پروژه را با استفاده از دستور زیر کلون کنید:
 
-cd automaedan85
+   ```shell
+   git clone https://github.com/AmirAli67/automaedan85.git
+   ```
 
-python automaedan.py
+2. وارد پوشه پروژه شده و فایل `automaedan.py` را اجرا کنید:
 
+   ```shell
+   cd automaedan85
+   python automaedan.py
+   ```
 
-اول کد بازیابی اکانت مورد نظر خود را وارد کنید
-بعد زمان پر شدن معدن خود وارد کنید
+3. در پنجره اجرای برنامه، ابتدا کلید بازیابی ورود به حساب کاربری خود را وارد کنید، سپس زمان پر شدن معدن خود را وارد کنید.
 
-ابزار محاسبه زمان پر شدن معدن :
-https://github.com/AmirAli67/automaedan85/blob/main/Maedan.apk 
+برای محاسبه زمان پر شدن معدن می‌توانید از [ابزار محاسبه زمان پر شدن معدن](https://github.com/AmirAli67/automaedan85/blob/main/Maedan) استفاده کنید.
