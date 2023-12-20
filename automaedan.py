@@ -14,7 +14,7 @@ from urllib.parse import urlencode
 
 init(autoreset=True)  # initialize colorama
 
-Creator = "t.me/NothingReal"
+Creator = "t.me/AmirAli67"
 session = Session()
 session.headers.update({'User-Agent' : 'Dalvik/2.1.0 (Linux; U; Android 13; 23049PCD8G Build/TKQ1.221114.001)',
                         'Accept-Encoding' : 'gzip',
