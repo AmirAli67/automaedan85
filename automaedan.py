@@ -1,16 +1,17 @@
+import subprocess
+import sys
 from os import system
 from requests import post, Session
 from json import loads , JSONDecodeError
 from uuid import uuid4
 from time import sleep
-import sys
 from itertools import cycle
 from colorama import Fore, init
 from hashlib import md5
 import time
 from random import shuffle
 
-init(autoreset=True)  # initialize colorama
+init(autoreset=True)  
 
 Creator = "t.me/NothingReal"
 session = Session()
@@ -77,7 +78,7 @@ def print_banner():
 
 def main():
     print_banner()
-    sleep_time = int(input("Please enter the mine time (in minutes): "))
+    sleep_time = int(input("Please enter the sleep time (in minutes): "))
     print("\n\n\n\n", 'mine time is >> ', Fore.CYAN, str(sleep_time), Fore.RESET, ' min', "\n")
     start(sleep_time)
 
@@ -87,5 +88,10 @@ headers = {
     'Accept-Encoding' : 'gzip',
     'Content-Type' : 'application/x-www-form-urlencoded; charset=UTF-8'
 }
+
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "colorama"])
+
+subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
 
 main()
