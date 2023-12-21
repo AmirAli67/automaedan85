@@ -18,15 +18,13 @@ session.headers.update({'User-Agent': 'Dalvik/2.1.0 (Linux; U; Android 13; 23049
 cr = Creator
 restore_key = input("Please enter your restore key: ")
 
-
 def decode(data):
     final_string = ''
     for key in data.keys():
         final_string += f"{key}={data[key]}&"
     return final_string[:-1]
 
-
-def load():
+def load_fruitpassport(restore_key):
     data = {'game_version': '1.7.10655',
             'device_name': 'Samsung Galaxy S21',
             'os_version': '10',
@@ -35,6 +33,7 @@ def load():
             'store_type': 'iraqapps',
             'restore_key': restore_key,
             'os_type': 2}
+
     try:
         response = session.post('http://iran.fruitcraft.ir/player/load', data=decode(data), timeout=5)
         response.raise_for_status()
@@ -45,7 +44,6 @@ def load():
     except ValueError as e:
         print("Error decoding JSON response.")
         sys.exit(1)
-
 
 def collect_gold(session, data):
     url = "http://iran.fruitcraft.ir/cards/collectgold"
@@ -60,7 +58,6 @@ def collect_gold(session, data):
     except requests.exceptions.RequestException as e:
         print(f"Error making HTTP request: {e}")
         return None
-
 
 def start(sleep_time):
     done = 0
@@ -91,18 +88,15 @@ def start(sleep_time):
                     f"\r• Gold Mine Done: {Fore.GREEN}{str(done)}{Fore.RESET} --- • Gold Mine Lost: {Fore.RED}{str(lost)}{Fore.RESET}")
                 sys.stdout.flush()
 
-
 def print_banner():
     system("figlet AmirAli67 | lolcat")
     print(Fore.YELLOW + "----------------------" + Fore.RESET)
 
-
 def main():
     print_banner()
     sleep_time = int(input("Please enter the mine time (in minutes): "))
-    print("\n\n\n\n", 'mine time is >> ', Fore.CYAN, str(sleep_time), Fore.RESET, ' min', "\n")
+    print(f"\n\n\n\n mine time is >> {Fore.CYAN}{sleep_time}{Fore.RESET} min \n")
     start(sleep_time)
-
 
 collect_data = {'udid': str(uuid4().int), 'restore_key': restore_key}
 
@@ -114,5 +108,5 @@ except subprocess.CalledProcessError as e:
     print(f"Error installing required packages: {e}")
     sys.exit(1)
 
-load()  # اینجا load فراخوانی شده است
+load_fruitpassport(restore_key)
 main()
