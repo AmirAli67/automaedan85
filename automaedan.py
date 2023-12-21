@@ -54,9 +54,11 @@ def collect_gold(session, data):
             return response.json()  
         else:
             print(f"Unexpected status code: {response.status_code}")
+            print(response.content)
             return None
     except requests.exceptions.RequestException as e:
         print(f"Error making HTTP request: {e}")
+        print(str(e.response.content))
         return None
 
 def start(sleep_time):
