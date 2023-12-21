@@ -101,8 +101,12 @@ def main():
 # collect_data
 collect_data = {'udid': str(uuid4().int), 'restore_key': restore_key}
 
-subprocess.check_call([sys.executable, "-m", "pip", "install", "colorama"])
-subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
-subprocess.check_call([sys.executable, "-m", "pip", "install", "lolcat"])
+try:
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "colorama"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "requests"])
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "lolcat"])
+except subprocess.CalledProcessError as e:
+    print(f"Error installing required packages: {e}")
+    sys.exit(1)
 
 main()
