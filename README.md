@@ -14,7 +14,7 @@ git clone https://github.com/AmirAli67/automaedan85.git
 cd automaedan85
 ```
 ```
-python automedan.py
+python automaedan.py
 ```
 
 وارد کردن Fruit Passport شما از قبل الزامی است. پسورد خود را در محیط ترمینال وارد کنید.
