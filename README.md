@@ -9,9 +9,9 @@
 git clone https://github.com/AmirAli67/automaedan85.git
 ```
 
-سپس با اجرای دستور زیر، فایل `main.py` اجرا می‌شود.
+سپس با اجرای دستور زیر، فایل `automaedan.py` اجرا می‌شود.
 ```
-python main.py
+python automedan.py
 ```
 
 وارد کردن Fruit Passport شما از قبل الزامی است. پسورد خود را در محیط ترمینال وارد کنید.
