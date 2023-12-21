@@ -9,7 +9,10 @@
 git clone https://github.com/AmirAli67/automaedan85.git
 ```
 
-سپس با اجرای دستور زیر، فایل `automaedan.py` اجرا می‌شود.
+سپس با اجرای دستور زیر، فایل `cd automaedan85` و `automaedan.py` اجرا می‌شود.
+```
+cd automaedan85
+```
 ```
 python automedan.py
 ```
